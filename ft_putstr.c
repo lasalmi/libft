@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/03 15:19:31 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/03 15:11:04 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/03 15:18:25 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-size_t	ft_strlen(const char *s);
-void	ft_putchar(char c);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr(char const *s);
-#endif
+#include <unistd.h>
+
+void	ft_putstr(char const *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		write (1, &s[i++], 1);
+}
