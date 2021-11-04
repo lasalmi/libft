@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/04 14:26:14 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/04 14:00:42 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/04 14:15:29 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *s);
-void	ft_putchar(char c);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr(char const *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memalloc(size_t size);
-#endif
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	char	*arr;
+	int		i;
+
+	arr = s;
+	i = 0;
+	while (n > 0)
+	{
+		arr[i++] = '\0';
+		n--;
+	}
+}

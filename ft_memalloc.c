@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/04 14:26:14 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/04 14:18:18 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/04 14:28:35 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-size_t	ft_strlen(const char *s);
-void	ft_putchar(char c);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr(char const *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memalloc(size_t size);
-#endif
+#include "libft.h"
+
+void	*ft_memalloc(size_t size)
+{
+	char	*arr;
+	int		i;
+
+	i = 0;
+	arr = malloc(size);
+	if (!arr)
+		return (NULL);
+	while (0 < size)
+	{
+		arr[i++] = 0;
+		size--;
+	}
+	return (arr);
+}
