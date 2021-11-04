@@ -6,12 +6,12 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:05:32 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/04 14:29:59 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/04 14:37:24 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h"
+#include "libft.h"git sr
 int	main(void)
 {
 	char *str;
