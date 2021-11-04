@@ -6,11 +6,9 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:11:04 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/03 15:18:25 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/04 13:17:20 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putstr(char const *s)
 {

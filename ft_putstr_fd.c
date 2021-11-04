@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 15:05:15 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/04 13:17:35 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/04 13:11:39 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/04 13:17:24 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	write (fd, &c, 1);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		write (fd, &s[i++], 1);
 }

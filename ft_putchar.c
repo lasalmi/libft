@@ -6,11 +6,9 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:58:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/03 15:02:39 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/04 13:17:29 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c)
 {
