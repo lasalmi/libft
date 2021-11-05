@@ -6,16 +6,24 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:28:45 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 13:29:49 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/05 13:46:34 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
+#include <ctype.h>
 
 int	main(void)
 {
-	char	a = 'C';
+//	char	a = 'C';
+	int i;
 
-	printf("%i",isascii(a));
+	i = -100;
+	while (i < 300)
+	{
+	printf("%i\n",ft_isascii(i));
+	printf("%i\n",isascii(i));
+	i++;
+	}
 }
