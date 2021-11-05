@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 14:58:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 10:55:23 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/05 10:32:32 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/05 11:01:31 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <string.h>
 
-void	ft_putchar(char c)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	write (1, &c, 1);
+	int	i;
+
+	i = 0;
+	if (s == NULL || f == NULL)
+		return ;
+	while (s[i] != '\0')
+	{
+		(*f)(&s[i]);
+		i++;
+	}
 }

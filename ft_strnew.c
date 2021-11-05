@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:57:27 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 10:01:29 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/05 10:49:35 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ char	*ft_strnew(size_t size)
 	if (!str)
 		return (NULL);
 	i = 0;
-
 	while (size > 0)
 	{
 		str[i] = '\0';

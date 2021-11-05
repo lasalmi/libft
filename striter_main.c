@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   striter_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 14:58:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 10:55:23 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/05 10:50:44 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/05 10:56:55 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+int	main(void)
 {
-	write (1, &c, 1);
+	char	*str = "LALLA";
+
+	ft_striter(str, &ft_putstr);
+	return (0);
 }
