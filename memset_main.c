@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:28:01 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/04 13:59:15 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/05 09:53:22 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ i = 0;
 while (i < 5)
 	printf("%c", arr[i++]);
 printf("\nAfter memset:\n");
-ft_memset(arr, 'L', 4);
-//memset(arr, 'L', 4);
+//ft_memset(arr, 0, 5);
+memset(arr, 0, 5);
 i = 0;
 //while (i < 5)
 	printf("%s", arr);

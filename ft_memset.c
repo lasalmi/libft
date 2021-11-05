@@ -6,19 +6,22 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:21:45 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/04 13:41:01 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/05 09:56:03 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t n)
 {
 	unsigned char	char_to_write;
 	int				i;
 	unsigned char	*arr;
 
-	arr = s;
+	if (b == NULL)
+		return (NULL);
+	arr = b;
 	char_to_write = (unsigned char)c;
 	i = 0;
 	while (n > 0)
@@ -27,5 +30,5 @@ void	*ft_memset(void *s, int c, size_t n)
 		i++;
 		n--;
 	}
-	return (s);
+	return (b);
 }

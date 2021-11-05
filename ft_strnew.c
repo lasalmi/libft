@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 14:18:18 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 09:56:25 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/05 09:57:27 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/05 10:01:29 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
+#include <string.h>
 
-void	*ft_memalloc(size_t size)
+char	*ft_strnew(size_t size)
 {
-	char	*arr;
+	char	*str;
 	int		i;
 
-	i = 0;
-	arr = malloc(size);
-	if (!arr)
+	str = (char *)malloc(size);
+	if (!str)
 		return (NULL);
-	while (0 < size)
+	i = 0;
+
+	while (size > 0)
 	{
-		arr[i++] = 0;
+		str[i] = '\0';
+		i++;
 		size--;
 	}
-	return (arr);
 }

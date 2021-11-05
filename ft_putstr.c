@@ -6,15 +6,20 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:11:04 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/04 13:17:20 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/05 09:10:48 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
+#include <unistd.h>
 
 void	ft_putstr(char const *s)
 {
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i] != '\0')
 		write (1, &s[i++], 1);
 }
