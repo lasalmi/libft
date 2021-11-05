@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 11:50:41 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 12:55:34 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/05 13:02:02 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/05 13:13:43 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strdup(const char *s1)
 {
 	int		length;
 	int		i;
-	char	*returnstr;
+	char	*duplicate;
 
 	i = 0;
 	length = 0;
-	if (s == NULL || f == NULL)
+	if (!s1)
 		return (NULL);
-	while ((s[i++] != '\0'))
+	while (s1[i++] != '\0')
 		length++;
-	returnstr = (char *)malloc(length + 1);
+	duplicate = (char *)malloc(length + 1);
 	i = 0;
-	while (s[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		returnstr[i] = (*f)(s[i]);
+		duplicate[i] = s1[i];
 		i++;
 	}
-	returnstr[i] = '\0';
-	return (returnstr);
+	duplicate[i] = '\0';
+	return (duplicate);
 }

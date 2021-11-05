@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 11:50:41 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 12:55:34 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/05 12:51:31 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/05 12:53:57 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		length;
 	int		i;
@@ -20,15 +20,13 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	i = 0;
 	length = 0;
-	if (s == NULL || f == NULL)
-		return (NULL);
 	while ((s[i++] != '\0'))
 		length++;
 	returnstr = (char *)malloc(length + 1);
 	i = 0;
 	while (s[i] != '\0')
 	{
-		returnstr[i] = (*f)(s[i]);
+		returnstr[i] = (*f)(i, s[i]);
 		i++;
 	}
 	returnstr[i] = '\0';
