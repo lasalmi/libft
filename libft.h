@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/10 13:47:14 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/10 14:19:07 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strstr(const char *haystack, const char *needle);
 int		ft_isascii(int c);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
-char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 #endif
