@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:39:50 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/10 13:40:20 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/10 14:27:46 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void)
 	char	*daa;
 
 	c = 'a';
-	dest = ft_memalloc(8);
+	dest = ft_memalloc(16);
 	src = ft_memalloc(8);
 	i = 0;
 	while (i < 7)
@@ -35,5 +35,6 @@ int	main(void)
 	ft_memmove(dest, src, 8);
 	printf("%s\n", dest);
 	daa = (char *)ft_memchr(dest, 'j', 5);
-	printf("%c", daa[0]);
+	printf("%c\n", daa[0]);
+	printf("%s", ft_strcat(dest, src));
 }
