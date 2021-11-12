@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 09:35:29 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 12:07:12 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/12 11:55:21 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/12 12:04:14 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char *ft_strchr(const char *s, int c)
+int	ft_atoi(const char *str)
 {
-	char	byte_to_find;
-	int		i;
+	int	result;
+	int	i;
+	int	multiplier;
 
-	byte_to_find = (char)c;
+	multiplier = 1;
 	i = 0;
-	while (s[i] != '\0')
+	result = 0;
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
 	{
-		if (s[i] == byte_to_find)
-			return ((char)&s[i]);
+		multiplier = -1;
 		i++;
 	}
-	if (s[i] == c)
-		return ((char)&s[i]);
-	return (NULL);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * multiplier);
 }

@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   atoi_main.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 09:35:29 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 12:07:12 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/12 12:04:25 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/12 12:08:41 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdio.h>
+#include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+int	main(void)
 {
-	char	byte_to_find;
-	int		i;
+	printf("%i", ft_atoi("-0000000000999999"));
 
-	byte_to_find = (char)c;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == byte_to_find)
-			return ((char)&s[i]);
-		i++;
-	}
-	if (s[i] == c)
-		return ((char)&s[i]);
-	return (NULL);
+	return (0);
 }
