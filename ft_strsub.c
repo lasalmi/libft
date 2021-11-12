@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 09:57:27 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 16:03:19 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/12 15:49:44 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/12 16:02:49 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strsub(const char *s, unsigned int start, size_t len)
 {
-	char	*str;
-	int		i;
+	char	*returnptr;
 
-	str = (char *)malloc(size);
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (size > 0)
-	{
-		str[i] = '\0';
-		i++;
-		size--;
-	}
-	return (str);
+	returnptr = ft_strnew(len + 1);
+	ft_memcpy(returnptr, &s[start], len);
+
+	return (returnptr);
 }
