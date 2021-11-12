@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 12:07:07 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/12 12:17:20 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ size_t  ft_strlcat(char *dest, const char *src, size_t size);
 int		ft_atoi(const char *str);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
+int		ft_isalpha(int	c);
 #endif
