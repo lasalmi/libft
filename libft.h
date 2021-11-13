@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/13 08:55:58 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/13 10:25:28 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,6 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len);
 char	**ft_strsplit(char const *s, int c);
 void	ft_putendl_fd(const char *s, int fd);
 void	ft_putendl(const char *s);
+char	*ft_strtrim(const char *s);
+char	*ft_itoa(int n);
 #endif
