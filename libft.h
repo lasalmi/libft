@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 16:01:39 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/13 08:55:58 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	**ft_strsplit(char const *s, int c);
+void	ft_putendl_fd(const char *s, int fd);
+void	ft_putendl(const char *s);
 #endif
