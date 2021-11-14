@@ -6,14 +6,14 @@
 /*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 10:18:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/13 12:02:08 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/14 15:26:11 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-static	char	*ft_fillstr(int nb, int	is_negative, char *str)
+static	void	ft_fillstr(int nb, int	is_negative, char *str)
 {
 	static int	index;
 	

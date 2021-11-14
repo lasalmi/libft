@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 09:35:29 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 12:07:12 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/14 15:21:09 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char *ft_strchr(const char *s, int c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == byte_to_find)
-			return ((char)&s[i]);
+			return ((char *)&s[i]);
 		i++;
 	}
 	if (s[i] == c)
-		return ((char)&s[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 15:08:44 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/10 15:14:29 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/14 15:25:46 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	j = 0;
 	while (s1[i] != '\0')
 		i++;
-	while (s2[j] != '\0' && n >= 0)
+	while (s2[j] != '\0' && n > 0)
 	{
 		s1[i] = s2[j];
 		i++;
