@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/13 10:25:28 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/14 07:58:43 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,5 @@ void	ft_putendl_fd(const char *s, int fd);
 void	ft_putendl(const char *s);
 char	*ft_strtrim(const char *s);
 char	*ft_itoa(int n);
+char	*ft_strjoin(char const *s1, char const *s2);
 #endif

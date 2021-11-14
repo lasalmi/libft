@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   strjoin_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 15:49:44 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/14 08:01:45 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/14 07:56:57 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/14 07:58:23 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdio.h>
 #include "libft.h"
-
-char	*ft_strsub(const char *s, unsigned int start, size_t len)
+int	main(void)
 {
-	char	*returnptr;
+	char	*s1 = "TIINA";
+	char	*s2 = "LAURI";
+	char	*result;
 
-	returnptr = ft_strnew(len + 1);
-	if (!returnptr)
-		return (NULL);
-	ft_strncpy(returnptr, &s[start], len);
+	result = ft_strjoin(s1, s2);
+	printf("%s", result);
 
-	return (returnptr);
+	return (0);
 }
