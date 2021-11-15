@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 21:50:03 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/15 11:31:21 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,25 +65,7 @@ static	char	*ft_fillstring(char const *str, char delimeter)
 	returnstring[i] = '\0';
 	return (returnstring);
 }
-int	main(void)
-{
-	char *str = "";
-//	char *testi;
-	char **testi2;
-	int i;
 
-	i = 0;
-//	printf("%i",ft_countstrings(str, 'a'));
-//	testi = ft_fillstring(&str[3], 'a');
-//	printf("%s", testi);
-	testi2 = ft_strsplit(str, 'a');
-	while (testi2[i] != 0)
-	{
-		printf("%s\n", testi2[i]);
-		i++;
-	}
-	return (0);
-}
 char	**ft_strsplit(char const *s, int c)
 {
 	char	**strarray;

@@ -6,12 +6,13 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:18:18 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 09:56:25 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/15 10:17:52 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <string.h>
 
 void	*ft_memalloc(size_t size)
 {

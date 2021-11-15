@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 08:56:19 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/13 09:31:02 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/15 10:13:32 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	*ft_strtrim(const char *s)
 
 	startindex = 0;
 	endindex = 0;
+	writeindex = 0;
 	while (s[startindex] == '\n' || s[startindex] == '\t' || s[startindex] == ' ')
 		startindex++;
 	endindex = startindex;

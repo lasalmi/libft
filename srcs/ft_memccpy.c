@@ -6,11 +6,12 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:25:25 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 13:17:33 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/15 10:18:44 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
