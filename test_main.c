@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:41:12 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/15 11:32:11 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:05:33 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int	main(void)
 	}
 	else
 		puts("Bzero ok");
+	ft_putnbr_fd(-2147483648, 1);
 // THIS IS FT_STRSPLIT MAIN
 //	char *str = "";
 //	char *testi;
