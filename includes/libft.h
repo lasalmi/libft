@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/15 10:20:57 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/15 11:59:58 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strnequ(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 #endif
