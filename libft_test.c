@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:43:30 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/18 13:51:38 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/18 15:03:04 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -371,11 +371,26 @@ CHEAT_TEST(atoitest,
 )
 
 CHEAT_TEST(issomethingtest,
-	int c = 350;
+	int c = -500;
 	while (c <= 600)
 	{
 		cheat_assert(isalpha(c) == ft_isalpha(c));
-		printf("Isalpha: %i FT_isalpha: %i C VALUE: %i \n", isalpha(c), ft_isalpha(c), c);
+//		printf("Isalnum: %i FT: %i VALUE: %i \n", isdigit(c), ft_isdigit(c), c);
+		cheat_assert(isdigit(c) == ft_isdigit(c));
+		cheat_assert(isalnum(c) == ft_isalnum(c));
+		cheat_assert(isascii(c) == ft_isascii(c));
+		cheat_assert(isprint(c) == ft_isprint(c));
 		c++;
+	}
+)
+CHEAT_TEST(islowerupper,
+	int	a;
+
+	a = -100;
+	while (a < 300)
+	{
+		cheat_assert(tolower(a) == ft_tolower(a));
+		cheat_assert(toupper(a) == ft_toupper(a));
+		a++;
 	}
 )
