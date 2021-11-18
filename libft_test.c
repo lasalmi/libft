@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:43:30 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/17 19:31:05 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:51:38 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,3 +195,187 @@ CHEAT_TEST(strncpytest,
 
 )
 
+CHEAT_TEST(strcattest,
+	char	src[] = "Testing";
+	char	src2[] = "Test";
+	char	src3[] = "Tes";
+	char	src4[] = "";
+	char	dest[15] = "Really?";
+	char	dest2[15] = "Really?";
+	char	dest3[15] = "Really?";
+	char	dest4[15] = "Really?";
+	char	dest5[15] = "Really?";
+	char	dest6[15] = "Really?";
+
+	cheat_assert_string(strcat(dest, src), ft_strcat(dest2, src));
+	cheat_assert_string(strcat(dest3, src2), ft_strcat(dest4, src2));
+	cheat_assert_string(strcat(dest5, src4), ft_strcat(dest6, src4));
+	)
+CHEAT_TEST(strncattest,
+	char	src[] = "Testing";
+	char	src2[] = "Test";
+	char	src3[] = "Tes";
+	char	src4[] = "";
+	char	dest[15] = "Really?";
+	char	dest2[15] = "Really?";
+	char	dest3[15] = "Really?";
+	char	dest4[15] = "Really?";
+	char	dest5[15] = "Really?";
+	char	dest6[15] = "Really?";
+
+	cheat_assert_string(strncat(dest, src, 6), ft_strncat(dest2, src, 6));
+	cheat_assert_string(strncat(dest3, src2, 2), ft_strncat(dest4, src2, 2));
+	cheat_assert_string(strncat(dest5, src4, 0), ft_strncat(dest6, src4, 0));
+	)
+	
+CHEAT_TEST(strlcattest,
+	char	src[] = "Testing";
+	char	src2[] = "Test";
+	char	src3[] = "Tes";
+	char	src4[] = "";
+	char	dest[15] = "Really?";
+	char	dest2[15] = "Really?";
+	char	dest3[15] = "Really?";
+	char	dest4[15] = "Really?";
+	char	dest5[15] = "Really?";
+	char	dest6[15] = "Really?";
+
+	cheat_assert(strlcat(dest, src, 15) == ft_strlcat(dest2, src, 15));
+	cheat_assert_string(dest, dest2);
+	cheat_assert(strlcat(dest3, src2, 15) == ft_strlcat(dest4, src2, 15));
+	cheat_assert_string(dest3, dest4);
+	cheat_assert(strlcat(dest5, src4, 0) == ft_strlcat(dest6, src4, 0));
+	cheat_assert_string(dest5, dest6);
+)
+
+CHEAT_TEST(strchrtest,
+	char	str[] = "abcdefghijklmopq";
+	char	str2[] = "";
+	char	to_search = 'a';
+	char	to_search2 = 'h';
+	char	to_search3 = 'q';
+	char	to_search4 = 0;
+
+	cheat_assert_pointer(strchr(str, to_search), ft_strchr(str, to_search));
+	cheat_assert_pointer(strchr(str, to_search2), ft_strchr(str, to_search2));
+	cheat_assert_pointer(strchr(str, to_search3), ft_strchr(str, to_search3));
+	cheat_assert_pointer(strchr(str, to_search4), ft_strchr(str, to_search4));
+	cheat_assert_pointer(strchr(str2, to_search4), ft_strchr(str2, to_search4));
+	cheat_assert_pointer(strchr(str2, to_search3), ft_strchr(str2, to_search3));
+
+)
+
+CHEAT_TEST(strrchrtest,
+	char	str[] = "abhcdqefghijklmopq";
+	char	str2[] = "";
+	char	to_search = 'a';
+	char	to_search2 = 'h';
+	char	to_search3 = 'q';
+	char	to_search4 = 0;
+
+	cheat_assert_pointer(strchr(str, to_search), ft_strchr(str, to_search));
+	cheat_assert_pointer(strchr(str, to_search2), ft_strchr(str, to_search2));
+	cheat_assert_pointer(strchr(str, to_search3), ft_strchr(str, to_search3));
+	cheat_assert_pointer(strchr(str, to_search4), ft_strchr(str, to_search4));
+	cheat_assert_pointer(strchr(str2, to_search4), ft_strchr(str2, to_search4));
+	cheat_assert_pointer(strchr(str2, to_search3), ft_strchr(str2, to_search3));
+
+)
+
+CHEAT_TEST(strstrtest, 
+	char	haystack[] ="this is the really really big haystack that has reallly much of HAY";
+
+	char	needle[] = "HAY";
+	char	needle2[] = "reallly much";
+	char	needle3[] = "not found";
+	char	needle4[] = "";
+	
+	cheat_assert_pointer(strstr(haystack, needle), ft_strstr(haystack, needle));
+	cheat_assert_pointer(strstr(haystack, needle2), ft_strstr(haystack, needle2));
+	cheat_assert_pointer(strstr(haystack, needle3), ft_strstr(haystack, needle3));
+	cheat_assert_pointer(strstr(haystack, needle4), ft_strstr(haystack, needle4));
+)
+
+CHEAT_TEST(strnstrtest, 
+	char	haystack[] ="this is the really really big haystack that has reallly much of HAY";
+
+	char	needle[] = "HAY";
+	char	needle2[] = "reallly much";
+	char	needle3[] = "not found";
+	char	needle4[] = "";
+	
+	cheat_assert_pointer(strnstr(haystack, needle, 67), ft_strnstr(haystack, needle, 67));
+	cheat_assert_pointer(strnstr(haystack, needle2, 30), ft_strnstr(haystack, needle2, 30));
+	cheat_assert_pointer(strnstr(haystack, needle3, 67), ft_strnstr(haystack, needle3, 67));
+	cheat_assert_pointer(strnstr(haystack, needle4,67), ft_strnstr(haystack, needle4, 67));
+
+)
+
+CHEAT_TEST(strcmptest, 
+	char	str[] = "this is a string for comparison";
+	char	str2[] = "this is a string";
+	char	str3[] = "this is something to compare";
+	char	str4[] = "";
+
+	cheat_assert(strcmp(str,str) == ft_strcmp(str,str));
+	cheat_assert(strcmp(str,str2) == ft_strcmp(str,str2));
+	cheat_assert(strcmp(str,str3) == ft_strcmp(str,str3));
+	cheat_assert(strcmp(str4,str) == ft_strcmp(str4,str));
+	cheat_assert(strcmp(str,str4) == ft_strcmp(str,str4));
+	cheat_assert(strcmp(str4,str4) == ft_strcmp(str4,str4));
+	
+)
+
+CHEAT_TEST(strncmptest,
+	char	str[] = "this is a string for comparison";
+	char	str2[] = "this is a string";
+	char	str5[] = "string";
+	char	str3[] = "this is something to compare";
+	char	str4[] = "";
+
+	cheat_assert(strncmp(str,str, 10) == ft_strncmp(str,str, 10));
+	cheat_assert(strncmp(str,str2, 10) == ft_strncmp(str,str2, 10));
+	cheat_assert(strncmp(str,str3, 20) == ft_strncmp(str,str3, 20));
+	cheat_assert(strncmp(str4,str, 40) == ft_strncmp(str4,str, 40));
+	cheat_assert(strncmp(str,str, 40) == ft_strncmp(str,str, 40));
+	cheat_assert(strncmp(str4,str4, 40) == ft_strncmp(str4,str4, 40));
+	cheat_assert(strncmp(str,str5, 15) == ft_strncmp(str,str5, 15));
+	cheat_assert(strncmp(str,str5, 16) == ft_strncmp(str,str5, 16));
+	cheat_assert(strncmp(str,str5, 17) == ft_strncmp(str,str5, 17));
+)
+
+CHEAT_TEST(atoitest,
+	char	str[] = "-------000012345";
+	char	str2[] = "0000123-45";
+	char	str3[] = "+123450000";
+	char	str4[] = "++++++++000012345";
+	char	str5[] = "0000b12345";
+	char	str6[] = "b000012345";
+	char	str7[] = "          000012345    ";
+	char	str8[] = "\n\n\n\n\t\t\t000012345";
+	char	str9[] = "000012345";
+	char	str10[] = "           -2147483648       ";
+	char	str11[] = "2147483647";
+	
+	cheat_assert(atoi(str) == ft_atoi(str));
+	cheat_assert(atoi(str2) == ft_atoi(str2));
+	cheat_assert(atoi(str3) == ft_atoi(str3));
+	cheat_assert(atoi(str4) == ft_atoi(str4));
+	cheat_assert(atoi(str5) == ft_atoi(str5));
+	cheat_assert(atoi(str6) == ft_atoi(str6));
+	cheat_assert(atoi(str7) == ft_atoi(str7));
+	cheat_assert(atoi(str8) == ft_atoi(str8));
+	cheat_assert(atoi(str9) == ft_atoi(str9));
+	cheat_assert(atoi(str10) == ft_atoi(str10));
+	cheat_assert(atoi(str11) == ft_atoi(str11));
+)
+
+CHEAT_TEST(issomethingtest,
+	int c = 350;
+	while (c <= 600)
+	{
+		cheat_assert(isalpha(c) == ft_isalpha(c));
+		printf("Isalpha: %i FT_isalpha: %i C VALUE: %i \n", isalpha(c), ft_isalpha(c), c);
+		c++;
+	}
+)
