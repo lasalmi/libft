@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:43:30 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/18 15:03:04 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/18 15:19:28 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -393,4 +393,9 @@ CHEAT_TEST(islowerupper,
 		cheat_assert(toupper(a) == ft_toupper(a));
 		a++;
 	}
+)
+CHEAT_TEST(ft_memalloc,
+	char	test[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+
+	cheat_assert(memcmp(test, ft_memalloc(8), 8) == 0);
 )
