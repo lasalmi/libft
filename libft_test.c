@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:43:30 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/17 15:11:52 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/17 19:31:05 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -183,3 +183,15 @@ CHEAT_TEST(strcpytest,
 	cheat_assert_string(strcpy(str6, str5),ft_strcpy(str7, str5));
 	
 )
+
+CHEAT_TEST(strncpytest,
+	char	str[] = "TRALLALAA";
+	char	str2[10];
+	char	str3[10];
+	char	str4[] = "";
+	cheat_assert_string(strncpy(str2, str, 10), ft_strncpy(str3, str, 10));
+	cheat_assert_string(strncpy(str2, str, 5), ft_strncpy(str3, str, 5));
+	cheat_assert_string(strncpy(str2, str4, 1), ft_strncpy(str3, str4, 1));
+
+)
+
