@@ -6,13 +6,13 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 16:52:53 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/22 16:55:28 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:18:31 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	ft_strdel(void **ap)
+void	ft_memdel(void **ap)
 {
 	free(*ap);
 	*ap = NULL;
