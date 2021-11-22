@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:43:30 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/18 15:19:28 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/19 20:29:17 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -394,8 +394,19 @@ CHEAT_TEST(islowerupper,
 		a++;
 	}
 )
-CHEAT_TEST(ft_memalloc,
+CHEAT_TEST(ft_memalloc_test,
 	char	test[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
 	cheat_assert(memcmp(test, ft_memalloc(8), 8) == 0);
+)
+CHEAT_TEST(ft_strnew_test,
+	char	test[10] = {'\0','\0','\0','\0','\0','\0','\0','\0'};
+
+	cheat_assert(memcmp(test, ft_strnew(8), 10) == 0);
+)
+CHEAT_TEST(ft_strclr_test,
+	char	test[10] = {'\0','\0','\0','\0','\0','\0','\0','\0','\0','\0'};
+	char	test2[10] = "abcdefghi";
+	ft_strclr(test2);
+	cheat_assert(memcmp(test, test2, 10) == 0);
 )
