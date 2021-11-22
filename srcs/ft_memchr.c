@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 13:07:38 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/14 15:27:11 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:04:21 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*src;
 	unsigned char	byte_to_look;
 	unsigned int	i;
-
 
 	src = (unsigned char *)s;
 	byte_to_look = (unsigned char)c;

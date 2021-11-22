@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:49:44 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/14 08:01:45 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:10:27 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len)
 	if (!returnptr)
 		return (NULL);
 	ft_strncpy(returnptr, &s[start], len);
-
 	return (returnptr);
 }

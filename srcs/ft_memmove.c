@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:24:43 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/10 13:27:02 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:05:03 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char			*source;
 	char			*destination;
 	unsigned int	i;
-
 
 	source = (char *)src;
 	destination = (char *)dest;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 10:18:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/14 15:26:11 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:03:54 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@
 static	void	ft_fillstr(int nb, int	is_negative, char *str)
 {
 	static int	index;
-	
+
 	if (!index)
 		index = 0;
 	if (is_negative == 1)
-		{
-			str[index] = '-';
-			index++;
-			is_negative = 0;
-		}
+	{
+		str[index] = '-';
+		index++;
+		is_negative = 0;
+	}
 	if (nb > 10)
 	{
 		ft_fillstr (nb / 10, is_negative, str);
@@ -35,10 +35,9 @@ static	void	ft_fillstr(int nb, int	is_negative, char *str)
 		str[index] = nb + '0';
 		index++;
 	}
-	
 }
 
-static	int ft_ilen(int nb)
+static	int	ft_ilen(int nb)
 {
 	if (nb < 10)
 		return (1);

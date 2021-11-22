@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/15 11:31:21 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:10:00 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static	int	ft_countstrings(char const *str, char delimeter)
 	}
 	return (result);
 }
+
 static	char	*ft_fillstring(char const *str, char delimeter)
 {
 	int		i;
