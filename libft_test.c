@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:43:30 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/19 20:29:17 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/22 17:24:29 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -409,4 +409,10 @@ CHEAT_TEST(ft_strclr_test,
 	char	test2[10] = "abcdefghi";
 	ft_strclr(test2);
 	cheat_assert(memcmp(test, test2, 10) == 0);
+)
+CHEAT_TEST(ft_memdel_test,
+	char	*str;
+
+	str = ft_strnew(10);
+	cheat_assert_pointer(NULL, ft_memdel(str));
 )
