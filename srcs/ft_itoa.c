@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 10:18:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/22 17:03:54 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/23 14:45:39 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 	{
 		str = (char *)malloc(12 * sizeof(char));
+		if (!str)
+			return (NULL);
 		ft_fillstr(2, 1, str);
 		n = 147483648;
 		ilen = 2;
@@ -69,6 +71,8 @@ char	*ft_itoa(int n)
 	}
 	if (!str)
 		str = (char *)malloc((ilen + ft_ilen(n) + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
 	ft_fillstr(n, is_negative, str);
 	str[ft_ilen(n) + 1 + ilen] = '\0';
 	return (str);

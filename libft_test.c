@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 12:43:30 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/22 17:24:29 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/23 13:34:21 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,30 @@
 #include <stddef.h>
 #include <string.h>
 #include "libft.h"
+#include <unistd.h>
+
+CHEAT_DECLARE(
+	void	kirjoitin(char *c)
+	{
+		*c = 'a';
+	}
+	void	kirjoitin2(unsigned int index, char *c)
+	{
+		if (index % 2 == 0)
+			*c = 'a';
+	}
+	char	kirjoitin3(char c)
+	{
+		return ('a');
+	}
+	char	kirjoitin4(unsigned int index, char c)
+	{
+		if (index % 2 == 0)
+			return ('a');
+		else
+			return (c);
+	}
+)
 
 CHEAT_TEST(bzerotest,
 
@@ -414,5 +438,88 @@ CHEAT_TEST(ft_memdel_test,
 	char	*str;
 
 	str = ft_strnew(10);
-	cheat_assert_pointer(NULL, ft_memdel(str));
+	ft_memdel((void **)&str);
+	cheat_assert_pointer(NULL, str);
+)
+
+CHEAT_TEST(ft_strdel_test,
+	char	*str;
+
+	str = ft_strnew(10);
+	ft_strdel(&str);
+	cheat_assert_pointer(NULL, str);
+)
+CHEAT_TEST(ft_striter_test,
+	char	testi[] = "TRALLALAA";
+	ft_striter(testi, &kirjoitin);
+	cheat_assert_string(testi, "aaaaaaaaa");
+)
+CHEAT_TEST(ft_striteri_test,
+	char	testi[] = "TRALLALAA";
+	ft_striteri(testi, &kirjoitin2);
+	cheat_assert_string(testi, "aRaLaAaAa");
+)
+CHEAT_TEST(ft_strmap_test,
+	char	testi[] = "TRALLALAA";
+
+	char	*result;
+	result = ft_strmap(testi, &kirjoitin3);
+	cheat_assert_string(result, "aaaaaaaaa");
+)
+CHEAT_TEST(ft_strmapi_test,
+	char	testi[] = "TRALLALAA";
+	char	testi2[] = "";
+
+	cheat_assert_string(ft_strmapi(testi, &kirjoitin4), "aRaLaAaAa");
+	cheat_assert_string(ft_strmapi("", &kirjoitin4), "");
+)
+CHEAT_TEST(ft_strequ_test,
+	char	testi[] = "LEILEI";
+
+	cheat_assert(ft_strequ(testi, testi) == 1);
+	cheat_assert(ft_strequ(testi, "") == 0);
+	cheat_assert(ft_strequ(testi, "laa") == 0);
+	cheat_assert(ft_strequ("", "laa") == 0);
+	cheat_assert(ft_strequ("", "") == 0);
+)
+CHEAT_TEST(ft_strnequ_test,
+	cheat_assert(ft_strnequ("LAAA", "LAAA", 4) == 1);
+	cheat_assert(ft_strnequ("LAAA", "", 4) == 0);
+	cheat_assert(ft_strnequ("", "LAAA", 4) == 0);
+	cheat_assert(ft_strnequ("", "", 4) == 1);
+)
+CHEAT_TEST(ft_strsub_test,
+	char	test[] = "PlaaLaa";
+	char	test2[] = "";
+
+	cheat_assert_string(ft_strsub(test, 4, 8), "Laa");
+	cheat_assert_string(ft_strsub(test, 4, 3), "Laa");
+	cheat_assert_string(ft_strsub(test, 0, 0), "");
+)
+CHEAT_TEST(ft_strjoin_test,
+	char	test[] = "Test";
+	char	test2[] = " String";
+	char	test3[] = "";
+
+	cheat_assert_string(ft_strjoin(test, test2),"Test String");
+	cheat_assert_string(ft_strjoin(test, test3),"Test");
+	cheat_assert_string(ft_strjoin(test3, test),"Test");
+)
+CHEAT_TEST(ft_strtrim_test,
+	char	test[] = "  \n\tTe\nst\n\n\t";
+	char	test2[] = "  \n";
+	char	test3[] = "  \n\tTe\nst\n\n\t";
+	cheat_assert_string(ft_strtrim(test), "Test");
+	cheat_assert_string(ft_strtrim(test2), "");
+	cheat_assert_string(ft_strtrim(test3), "Te\nst");
+)
+CHEAT_TEST(ft_strsplit_test,
+	char	test[] = "TestiaStriaAina";
+	char	test3[] = "";
+	char	**test2 = ft_strsplit(test, 'a');
+	char	**test4 = ft_strsplit(test3, 'a');
+	cheat_assert_string(test2[0],"Testi");
+	cheat_assert_string(test2[1],"Stri");
+	cheat_assert_string(test2[2],"Ain");
+	cheat_assert_pointer(test4, NULL);
 )

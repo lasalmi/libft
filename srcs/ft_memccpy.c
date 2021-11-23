@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:25:25 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/15 10:18:44 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/23 14:56:05 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	int		i;
 	char	cchar;
 
-	if (dest == NULL || src == NULL)
-		return (NULL);
 	cchar = (char)c;
 	copysource = (char *)src;
 	copydest = (char *)dest;

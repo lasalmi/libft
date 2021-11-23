@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 08:22:58 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/22 17:07:03 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/23 16:24:23 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		return (size + ft_strlen(src));
 	while (size > (i + 1) && src[j] != '\0')
 		dest[i++] = src[j++];
-	dest[i] = '\0';
+	if (size != 0)
+		dest[i] = '\0';
 	return (i);
 }
