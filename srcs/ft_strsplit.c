@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/24 14:40:26 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/24 23:22:12 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 static	int	ft_countstrings(char const *str, char delimeter)
 {
@@ -39,6 +38,18 @@ static	int	ft_countstrings(char const *str, char delimeter)
 		i++;
 	}
 	return (result);
+}
+
+static	char	*ft_freeall(char **strarray, int j)
+{
+	j = j - 1;
+	while (j >= 0)
+	{
+		free(strarray[j]);
+		j--;
+	}
+	free(strarray);
+	return (NULL);
 }
 
 static	char	*ft_fillstring(char const *str, char delimeter)
@@ -88,7 +99,7 @@ char	**ft_strsplit(char const *s, int c)
 			i++;
 		strarray[j] = ft_fillstring(&s[i], c);
 		if (!strarray[j])
-			return (NULL);
+			return (ft_freeall(strarray, j));
 		while (s[i] != c)
 			i++;
 		j++;
