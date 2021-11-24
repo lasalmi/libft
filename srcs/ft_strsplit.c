@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/22 17:10:00 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/24 14:40:26 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ char	**ft_strsplit(char const *s, int c)
 	int		i;
 	int		j;
 
+	if (!s)
+		return (NULL);
 	stringcount = ft_countstrings(s, c);
 	strarray = (char **)malloc((stringcount + 1) * sizeof(char **));
 	if (!strarray)
