@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/25 15:03:11 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/25 15:09:11 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,5 @@ typedef struct		s_list
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
 #endif
