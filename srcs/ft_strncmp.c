@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:50:47 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/22 17:08:37 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/26 14:27:38 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	str = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
+	if (n == 0)
+		return (0);
 	while (str[i] == str2[i] && str[i] != '\0'
 		&& str2[i] != '\0' && (i + 1) < n)
 		i++;
