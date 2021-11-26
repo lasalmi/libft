@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/24 23:22:12 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/26 13:30:39 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static	int	ft_countstrings(char const *str, char delimeter)
 	return (result);
 }
 
-static	char	*ft_freeall(char **strarray, int j)
+static	char	**ft_freeall(char **strarray, int j)
 {
 	j = j - 1;
 	while (j >= 0)
