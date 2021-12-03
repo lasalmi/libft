@@ -6,11 +6,11 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:50:41 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 12:55:34 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/02 12:34:16 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
@@ -25,6 +25,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	while ((s[i++] != '\0'))
 		length++;
 	returnstr = (char *)malloc(length + 1);
+	if (!returnstr)
+		return (NULL);
 	i = 0;
 	while (s[i] != '\0')
 	{

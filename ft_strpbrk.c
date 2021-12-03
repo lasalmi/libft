@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 11:55:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/30 12:30:29 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/12/01 10:02:36 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/12/02 12:46:23 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	result;
-	int	i;
-	int	multiplier;
+#include "libft.h"
 
-	multiplier = 1;
+static	int	ft_charcompare(const char c, const char *charset)
+{
+	int	i;
+
 	i = 0;
-	result = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (charset[i] != '\0')
 	{
-		if (str[i] == '-')
-			multiplier = -1;
+		if (c == charset[i])
+			return (1);
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	return (0);
+}
+
+char	*ft_strpbrk(const char *s, const char *charset)
+{
+	int		i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		result = result * 10 + (str[i] - '0');
+		if (ft_charcompare(s[i], charset) == 1)
+			return ((char *)&s[i]);
 		i++;
 	}
-	return (result * multiplier);
+	return (NULL);
 }

@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 13:02:02 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:33:40 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/25 15:09:13 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/29 19:19:10 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	int		length;
-	int		i;
-	char	*duplicate;
+	t_list	*old_head;
+	t_list	*new_head;
 
-	i = 0;
-	length = 0;
-	while (s1[i++] != '\0')
-		length++;
-	duplicate = (char *)malloc(length + 1);
-	if (!duplicate)
-		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		duplicate[i] = s1[i];
-		i++;
-	}
-	duplicate[i] = '\0';
-	return (duplicate);
+	old_head = *alst;
+	new_head = new;
+	new_head->next = *alst;
+	*alst = new_head;
 }

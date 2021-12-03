@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 13:02:02 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:33:40 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/25 15:15:08 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/11/29 19:45:47 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	int		length;
-	int		i;
-	char	*duplicate;
+	t_list	*current;
+	t_list	*next;
 
-	i = 0;
-	length = 0;
-	while (s1[i++] != '\0')
-		length++;
-	duplicate = (char *)malloc(length + 1);
-	if (!duplicate)
-		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
+	current = lst;
+	next = lst->next;
+	while (current != NULL)
 	{
-		duplicate[i] = s1[i];
-		i++;
+		(*f)(current);
+		if (next == NULL)
+			break ;
+		current = next;
+		next = current->next;
 	}
-	duplicate[i] = '\0';
-	return (duplicate);
 }

@@ -6,12 +6,11 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:21:45 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 09:56:03 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/02 12:31:28 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memset(void *b, int c, size_t n)
 {
@@ -19,8 +18,6 @@ void	*ft_memset(void *b, int c, size_t n)
 	int				i;
 	unsigned char	*arr;
 
-	if (b == NULL)
-		return (NULL);
 	arr = b;
 	char_to_write = (unsigned char)c;
 	i = 0;

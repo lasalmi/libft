@@ -6,11 +6,11 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:43:14 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/03 14:55:41 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/02 12:36:20 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

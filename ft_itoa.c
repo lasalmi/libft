@@ -3,42 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 10:18:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/13 12:02:08 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/02 12:29:26 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-static	char	*ft_fillstr(int nb, int	is_negative, char *str)
+static	void	ft_fillstr(int nb, int	is_negative, char *str, size_t stopper)
 {
-	static int	index;
-	
+	static size_t	index;
+
 	if (!index)
 		index = 0;
 	if (is_negative == 1)
-		{
-			str[index] = '-';
-			index++;
-			is_negative = 0;
-		}
-	if (nb > 10)
 	{
-		ft_fillstr (nb / 10, is_negative, str);
-		ft_fillstr (nb % 10, is_negative, str);
+		str[index] = '-';
+		index++;
+		is_negative = 0;
+	}
+	if (nb > 9)
+	{
+		ft_fillstr (nb / 10, is_negative, str, stopper);
+		ft_fillstr (nb % 10, is_negative, str, stopper);
 	}
 	if (nb < 10)
 	{
-		str[index] = nb + '0';
+		str[index] = (char)(nb + '0');
 		index++;
+		if (index == stopper)
+			index = 0;
 	}
-	
 }
 
-static	int ft_ilen(int nb)
+static	size_t	ft_ilen(int nb)
 {
 	if (nb < 10)
 		return (1);
@@ -46,9 +46,20 @@ static	int ft_ilen(int nb)
 		return (1 + ft_ilen(nb / 10));
 }
 
+static	char	*ft_intmin(char **str, int *n, size_t *ilen, size_t stopper)
+{
+	 *str = (char *)malloc(12 * sizeof(char));
+	if (!*str)
+		return (NULL);
+	ft_fillstr(2, 1, *str, stopper);
+	*n = 147483648;
+	*ilen = 2;
+	return (*str);
+}
+
 char	*ft_itoa(int n)
 {
-	int		ilen;
+	size_t	ilen;
 	int		is_negative;
 	char	*str;
 
@@ -56,12 +67,7 @@ char	*ft_itoa(int n)
 	ilen = 0;
 	is_negative = 0;
 	if (n == -2147483648)
-	{
-		str = (char *)malloc(12 * sizeof(char));
-		ft_fillstr(2, 1, str);
-		n = 147483648;
-		ilen = 2;
-	}
+		ft_intmin(&str, &n, &ilen, (ft_ilen(n) + ilen));
 	if (n < 0)
 	{
 		is_negative = 1;
@@ -70,7 +76,9 @@ char	*ft_itoa(int n)
 	}
 	if (!str)
 		str = (char *)malloc((ilen + ft_ilen(n) + 1) * sizeof(char));
-	ft_fillstr(n, is_negative, str);
-	str[ft_ilen(n) + 1 + ilen] = '\0';
+	if (!str)
+		return (NULL);
+	ft_fillstr(n, is_negative, str, (ft_ilen(n) + ilen));
+	str[ft_ilen(n) + ilen] = '\0';
 	return (str);
 }

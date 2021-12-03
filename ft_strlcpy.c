@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 11:55:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/30 12:30:29 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/12/01 10:57:26 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/12/02 14:25:06 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	result;
-	int	i;
-	int	multiplier;
+#include "libft.h"
 
-	multiplier = 1;
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
+
 	i = 0;
-	result = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && (dstsize - 1) > i)
 	{
-		if (str[i] == '-')
-			multiplier = -1;
+		dst[i] = src[i];
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (result * multiplier);
+	if (dstsize > 0)
+		dst[i] = '\0';
+	return (ft_strlen(src));
 }

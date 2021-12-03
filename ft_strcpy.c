@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 13:42:00 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/10 14:19:26 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/11/23 14:43:44 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ char	*ft_strcpy(char *dst, const char *src)
 	{
 		dst[i] = src[i];
 		i++;
-		if (src[i] == '\0')
-		{
-			dst[i] = src[i];
-		}
 	}
+	if (src[i] == '\0')
+		dst[i] = '\0';
 	return (dst);
 }

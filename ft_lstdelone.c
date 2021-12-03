@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 13:02:02 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:33:40 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/25 14:35:13 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/12/02 12:36:40 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	int		length;
-	int		i;
-	char	*duplicate;
+	t_list	*link_to_del;
 
-	i = 0;
-	length = 0;
-	while (s1[i++] != '\0')
-		length++;
-	duplicate = (char *)malloc(length + 1);
-	if (!duplicate)
-		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		duplicate[i] = s1[i];
-		i++;
-	}
-	duplicate[i] = '\0';
-	return (duplicate);
+	link_to_del = *alst;
+	(*del)(link_to_del->content, link_to_del->content_size);
+	if (*alst != link_to_del->next)
+		free (*alst);
+	*alst = NULL;
 }

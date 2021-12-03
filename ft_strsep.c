@@ -1,33 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsep.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 14:00:40 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:34:49 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/12/01 13:48:10 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/12/02 12:35:25 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+static	int	ft_charcompare(const char c, const char *charset)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (i < len && src[i] != '\0')
+	while (charset[i] != '\0')
 	{
-		dst[i] = src[i];
-		i++;
-		if (src[i] == '\0')
-			dst[i] = '\0';
-	}
-	while (i < len)
-	{
-		dst[i] = '\0';
+		if (c == charset[i])
+			return (1);
 		i++;
 	}
-	return (dst);
+	return (0);
+}
+
+char	*ft_strsep(char **stringp, const char *delim)
+{
+	int		i;
+	char	*rptr;
+
+	rptr = *stringp;
+	i = 0;
+	while (stringp[0][i] != '\0' && ft_charcompare(stringp[0][i], delim) == 0)
+		i++;
+	if (stringp[0][i] == '\0')
+		*stringp = NULL;
+	else
+	{
+		*stringp = &stringp[0][i + 1];
+		stringp[0][i] = '\0';
+	}
+	return (*stringp);
 }

@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 11:55:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/30 12:30:29 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/12/01 10:25:11 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/12/02 12:32:16 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	result;
-	int	i;
-	int	multiplier;
+#include "libft.h"
 
-	multiplier = 1;
+static	int	ft_charcompare(const char c, const char *charset)
+{
+	int	i;
+
 	i = 0;
-	result = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (charset[i] != '\0')
 	{
-		if (str[i] == '-')
-			multiplier = -1;
+		if (c == charset[i])
+			return (1);
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
+	return (0);
+}
+
+size_t	ft_strcspn(const char *s, const char *charset)
+{
+	size_t	i;
+
+	i = 0;
+	while (ft_charcompare(s[i], charset) == 0 && s[i] != '\0')
 		i++;
-	}
-	return (result * multiplier);
+	return (i);
 }

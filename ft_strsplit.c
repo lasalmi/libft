@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lasalmi <lasalmi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/12 21:50:03 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/02 19:34:36 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 static	int	ft_countstrings(char const *str, char delimeter)
 {
@@ -26,7 +23,7 @@ static	int	ft_countstrings(char const *str, char delimeter)
 	result = 0;
 	while (str[i] != '\0')
 	{
-		while (str[i] != delimeter)
+		while (str[i] != delimeter && str[i] != '\0')
 		{
 			if (counted == 0)
 			{
@@ -36,10 +33,24 @@ static	int	ft_countstrings(char const *str, char delimeter)
 			i++;
 		}
 		counted = 0;
-		i++;
+		if (str[i] != '\0')
+			i++;
 	}
 	return (result);
 }
+
+static	char	**ft_freeall(char **strarray, int j)
+{
+	j = j - 1;
+	while (j >= 0)
+	{
+		free(strarray[j]);
+		j--;
+	}
+	free(strarray);
+	return (NULL);
+}
+
 static	char	*ft_fillstring(char const *str, char delimeter)
 {
 	int		i;
@@ -65,25 +76,7 @@ static	char	*ft_fillstring(char const *str, char delimeter)
 	returnstring[i] = '\0';
 	return (returnstring);
 }
-int	main(void)
-{
-	char *str = "";
-//	char *testi;
-	char **testi2;
-	int i;
 
-	i = 0;
-//	printf("%i",ft_countstrings(str, 'a'));
-//	testi = ft_fillstring(&str[3], 'a');
-//	printf("%s", testi);
-	testi2 = ft_strsplit(str, 'a');
-	while (testi2[i] != 0)
-	{
-		printf("%s\n", testi2[i]);
-		i++;
-	}
-	return (0);
-}
 char	**ft_strsplit(char const *s, int c)
 {
 	char	**strarray;
@@ -92,22 +85,21 @@ char	**ft_strsplit(char const *s, int c)
 	int		j;
 
 	stringcount = ft_countstrings(s, c);
-	strarray = (char **)malloc((stringcount + 1) * sizeof(char **));
+	strarray = (char **)malloc((stringcount + 1) * sizeof(char *));
 	if (!strarray)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (stringcount > 0)
+	while (stringcount-- > 0)
 	{
 		while (s[i] == c)
 			i++;
 		strarray[j] = ft_fillstring(&s[i], c);
 		if (!strarray[j])
-			return (NULL);
+			return (ft_freeall(strarray, j));
 		while (s[i] != c)
 			i++;
 		j++;
-		stringcount--;
 	}
 	strarray[j] = NULL;
 	return (strarray);

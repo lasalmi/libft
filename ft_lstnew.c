@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 12:24:43 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:31:14 by lasalmi          ###   ########.fr       */
+/*   Created: 2021/11/25 14:11:34 by lasalmi           #+#    #+#             */
+/*   Updated: 2021/12/02 14:20:08 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char			*source;
-	char			*destination;
-	unsigned int	i;
+	t_list	*newlink;
 
-	source = (char *)src;
-	destination = (char *)dest;
-	i = 0;
-	if (!dest && !src)
+	newlink = (t_list *)malloc(sizeof(t_list));
+	if (!newlink)
 		return (NULL);
-	if (src < dest)
+	if (content == NULL)
 	{
-		while (n > 0)
-		{
-			destination[n - 1] = source[n - 1];
-			n--;
-		}
+		newlink->content = NULL;
+		newlink->content_size = 0;
+		newlink->next = NULL;
+		return (newlink);
 	}
-	while (i < n)
+	else
 	{
-		destination[i] = source[i];
-		i++;
+		newlink->content = ft_memalloc(content_size);
+		ft_memcpy(newlink->content, content, content_size);
+		newlink->content_size = content_size;
+		newlink->next = NULL;
+		return (newlink);
 	}
-	return (destination);
 }

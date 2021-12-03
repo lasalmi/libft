@@ -6,11 +6,11 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:32:32 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/05 11:01:31 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/02 12:33:49 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {
