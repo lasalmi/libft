@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 08:51:58 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:37:11 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 13:18:00 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl(const char *s)
 {
-	int	bytes;
+	size_t	bytes;
 
 	if (!s)
 		return ;

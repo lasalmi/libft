@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:51:31 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:34:23 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 13:32:06 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		length;
-	int		i;
-	char	*returnstr;
+	size_t			length;
+	unsigned int	i;
+	char			*returnstr;
 
 	i = 0;
 	length = 0;

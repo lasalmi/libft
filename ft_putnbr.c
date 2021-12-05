@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 11:48:07 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/30 13:15:22 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 13:18:34 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	ft_putnbr(int n)
 		ft_putnbr(n % 10);
 	}
 	if (n < 10)
-		ft_putchar(n + '0');
+		ft_putchar((char)(n + '0'));
 }

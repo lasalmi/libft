@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 08:56:19 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:35:46 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 13:32:35 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(const char *s)
 {
-	int		sindex;
-	int		endindex;
-	int		writeindex;
+	size_t	sindex;
+	size_t	endindex;
+	size_t	writeindex;
 	char	*newstring;
 
 	sindex = 0;
