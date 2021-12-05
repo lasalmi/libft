@@ -6,13 +6,13 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/05 13:25:45 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 13:52:20 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	size_t ft_countstrings(char const *str, int delimeter)
+static	size_t	ft_countstrings(char const *str, int delimeter)
 {
 	int		i;
 	int		counted;
