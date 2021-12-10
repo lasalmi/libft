@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:38:31 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/06 15:16:21 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
 typedef struct s_list
 {
 	void			*content;
@@ -56,7 +57,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strsub(const char *s, unsigned int start, size_t len);
-char	**ft_strsplit(char const *s, int c);
+char	**ft_strsplit(char const *s, char c);
 void	ft_putendl_fd(const char *s, int fd);
 void	ft_putendl(const char *s);
 char	*ft_strtrim(const char *s);

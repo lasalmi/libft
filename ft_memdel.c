@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 16:52:53 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:33:26 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 16:10:57 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_memdel(void **ap)
 {
-	if (!ap)
-		return ;
 	free(*ap);
 	*ap = NULL;
 }

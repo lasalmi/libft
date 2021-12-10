@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:48:10 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:35:25 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/08 15:56:04 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,16 @@ char	*ft_strsep(char **stringp, const char *delim)
 
 	rptr = *stringp;
 	i = 0;
+	if (*stringp == NULL)
+		return (NULL);
 	while (stringp[0][i] != '\0' && ft_charcompare(stringp[0][i], delim) == 0)
 		i++;
 	if (stringp[0][i] == '\0')
 		*stringp = NULL;
 	else
 	{
-		*stringp = &stringp[0][i + 1];
 		stringp[0][i] = '\0';
+		*stringp = &stringp[0][i + 1];
 	}
-	return (*stringp);
+	return (rptr);
 }

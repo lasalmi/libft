@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:32:32 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:33:49 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 16:06:32 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	ft_striter(char *s, void (*f)(char *))
 	int	i;
 
 	i = 0;
-	if (s == NULL || f == NULL)
-		return ;
 	while (s[i] != '\0')
 	{
 		(*f)(&s[i]);

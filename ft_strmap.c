@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:50:41 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:34:16 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 16:06:55 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int		length;
+	size_t	length;
 	int		i;
 	char	*returnstr;
 
 	i = 0;
 	length = 0;
-	if (s == NULL || f == NULL)
-		return (NULL);
 	while ((s[i++] != '\0'))
 		length++;
 	returnstr = (char *)malloc(length + 1);

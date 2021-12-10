@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:11:39 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:31:49 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 16:09:49 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	int	bytes;
+	size_t	bytes;
 
-	if (!s)
-		return ;
 	bytes = ft_strlen(s);
 	write (fd, s, bytes);
 }

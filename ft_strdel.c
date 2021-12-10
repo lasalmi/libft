@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:03:27 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:32:42 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 16:11:00 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_strdel(char **as)
 {
-	if (!as)
-		return ;
 	free(*as);
 	*as = NULL;
 }

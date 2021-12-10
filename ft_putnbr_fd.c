@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 11:55:35 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/11/30 13:16:22 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 13:18:16 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 	if (n < 10)
-		ft_putchar_fd(n + '0', fd);
+		ft_putchar_fd((char)(n + '0'), fd);
 }

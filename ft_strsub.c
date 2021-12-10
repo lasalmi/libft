@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 15:49:44 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 12:35:43 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/05 16:07:40 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len)
 {
 	char	*returnptr;
 
-	if (!s)
-		return (NULL);
 	returnptr = ft_strnew(len);
 	if (!returnptr)
 		return (NULL);

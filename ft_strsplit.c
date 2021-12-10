@@ -6,17 +6,17 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 18:23:54 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/02 19:34:36 by lasalmi          ###   ########.fr       */
+/*   Updated: 2021/12/06 15:17:06 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_countstrings(char const *str, char delimeter)
+static	size_t	ft_countstrings(char const *str, char delimeter)
 {
 	int		i;
 	int		counted;
-	int		result;
+	size_t	result;
 
 	counted = 0;
 	i = 0;
@@ -54,7 +54,7 @@ static	char	**ft_freeall(char **strarray, int j)
 static	char	*ft_fillstring(char const *str, char delimeter)
 {
 	int		i;
-	int		length;
+	size_t	length;
 	char	*returnstring;
 
 	i = 0;
@@ -77,10 +77,10 @@ static	char	*ft_fillstring(char const *str, char delimeter)
 	return (returnstring);
 }
 
-char	**ft_strsplit(char const *s, int c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**strarray;
-	int		stringcount;
+	size_t	stringcount;
 	int		i;
 	int		j;
 
@@ -97,7 +97,7 @@ char	**ft_strsplit(char const *s, int c)
 		strarray[j] = ft_fillstring(&s[i], c);
 		if (!strarray[j])
 			return (ft_freeall(strarray, j));
-		while (s[i] != c)
+		while (s[i] != c && s[i] != '\0')
 			i++;
 		j++;
 	}
