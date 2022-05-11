@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2021/12/06 15:16:21 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/05/11 20:54:59 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,5 @@ size_t	ft_strcspn(const char *s, const char *charset);
 size_t	ft_strspn(const char *s, const char *charset);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strsep(char **stringp, const char *delim);
+size_t	ft_intlen(long long nb);
 #endif
