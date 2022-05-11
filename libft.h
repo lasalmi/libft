@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/05/11 20:54:59 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/05/11 23:39:44 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# define BUFF_SIZE 8
+# define FD_MAX 4096
 
 typedef struct s_list
 {
@@ -86,4 +88,5 @@ size_t	ft_strspn(const char *s, const char *charset);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strsep(char **stringp, const char *delim);
 size_t	ft_intlen(long long nb);
+int		get_next_line(const int fd, char **line);
 #endif

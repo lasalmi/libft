@@ -149,6 +149,5 @@ fclean : clean
 re : fclean all
 
 test : 
-	$(CC) -L. -Iincludes -I. -o libft_test libft_test.c \
- -lm -lft 
+	$(CC) -L. -I. main.c -lft
 
