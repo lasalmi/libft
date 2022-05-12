@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/05/11 23:39:44 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/05/12 20:25:33 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strsep(char **stringp, const char *delim);
 size_t	ft_intlen(long long nb);
 int		get_next_line(const int fd, char **line);
+int		ft_getchar(void);
 #endif

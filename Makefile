@@ -61,7 +61,8 @@ ft_strsep.o \
 ft_strspn.o \
 ft_strcspn.o \
 ft_strlcpy.o \
-ft_intlen.o
+ft_intlen.o \
+ft_getchar.o
 
 SRCS=$(SRCDIR)ft_atoi.c \
 $(SRCDIR)ft_bzero.c \
@@ -126,7 +127,8 @@ $(SRCDIR)ft_strsep.c \
 $(SRCDIR)ft_strspn.c \
 $(SRCDIR)ft_strcspn.c \
 $(SRCDIR)ft_strlcpy.c \
-$(SRCDIR)ft_intlen.c
+$(SRCDIR)ft_intlen.c \
+$(SRCDIR)ft_getchar.c
 
 SRCDIR=./
 CC=gcc
