@@ -63,6 +63,7 @@ ft_strcspn.o \
 ft_strlcpy.o \
 ft_intlen.o \
 ft_getchar.o \
+ft_getnbrs.o \
 ft_uintlen.o
 
 SRCS=$(SRCDIR)ft_atoi.c \
@@ -130,10 +131,11 @@ $(SRCDIR)ft_strcspn.c \
 $(SRCDIR)ft_strlcpy.c \
 $(SRCDIR)ft_intlen.c \
 $(SRCDIR)ft_getchar.c \
+$(SRCDIR)ft_getnbrs.c \
 $(SRCDIR)ft_uintlen.c
 SRCDIR=./
 CC=gcc
-FLAGS=-Wall -Wextra -Werror
+FLAGS=-Wall -Wextra -Werror -g
 NAME=libft.a
 
 all : $(NAME)
@@ -152,5 +154,5 @@ fclean : clean
 re : fclean all
 
 test : 
-	$(CC) -L. -I. main.c -lft
+	$(CC) $(FLAGS) -L. -I. main.c -lft
 
