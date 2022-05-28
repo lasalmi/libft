@@ -153,6 +153,6 @@ fclean : clean
 
 re : fclean all
 
-test : 
+test : re
 	$(CC) $(FLAGS) -L. -I. main.c -lft
 
