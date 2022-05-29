@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/05/28 11:51:15 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/05/29 09:48:01 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 # define BUFF_SIZE 8
 # define FD_MAX 4096
 
@@ -91,4 +94,5 @@ size_t	ft_intlen(long long nb);
 int		get_next_line(const int fd, char **line);
 int		ft_getchar(void);
 char	*ft_getnbrs(char **str);
+size_t	ft_countrows(char *file);
 #endif

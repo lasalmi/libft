@@ -65,6 +65,7 @@ $(SRCDIR)ft_intlen.c \
 $(SRCDIR)ft_getchar.c \
 $(SRCDIR)ft_getnbrs.c \
 $(SRCDIR)get_next_line.c \
+$(SRCDIR)ft_filerows.c \
 $(SRCDIR)ft_uintlen.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
