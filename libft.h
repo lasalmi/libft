@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/05/29 09:48:01 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/05/29 09:57:05 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,5 @@ size_t	ft_intlen(long long nb);
 int		get_next_line(const int fd, char **line);
 int		ft_getchar(void);
 char	*ft_getnbrs(char **str);
-size_t	ft_countrows(char *file);
+size_t	ft_filerows(char *file);
 #endif

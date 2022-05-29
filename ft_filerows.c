@@ -6,14 +6,20 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 09:45:31 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/05/29 09:46:18 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/05/29 09:58:03 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	ft_error(char *error)
+{
+	ft_putstr(error);
+	exit(1);
+}
+
 /* Counts the rows of a given file */
-size_t	ft_countrows(char *file)
+size_t	ft_filerows(char *file)
 {
 	size_t	rows;
 	int		fd;
