@@ -6,11 +6,11 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 08:06:05 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/01/27 11:24:48 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/05/29 09:35:09 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int	ft_mstrdup(char **dest, char *src)
 {
