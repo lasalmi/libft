@@ -66,7 +66,39 @@ $(SRCDIR)ft_getchar.c \
 $(SRCDIR)ft_getnbrs.c \
 $(SRCDIR)get_next_line.c \
 $(SRCDIR)ft_filerows.c \
-$(SRCDIR)ft_uintlen.c
+$(SRCDIR)ft_uintlen.c \
+$(SRCDIR)ft_printf.c \
+$(SRCDIR)ft_pf_read_specifiers.c \
+$(SRCDIR)ft_pf_stages.c \
+$(SRCDIR)ft_pf_handle_char.c \
+$(SRCDIR)ft_pf_conv_char.c \
+$(SRCDIR)ft_pf_pad_with.c \
+$(SRCDIR)ft_pf_read_conversion.c \
+$(SRCDIR)ft_pf_print.c \
+$(SRCDIR)ft_pf_conv_str.c \
+$(SRCDIR)ft_pf_handle_str.c \
+$(SRCDIR)ft_pf_convert_hexa.c \
+$(SRCDIR)ft_pf_handle_ptr.c \
+$(SRCDIR)ft_pf_handle_oux.c \
+$(SRCDIR)ft_pf_conv_oux.c \
+$(SRCDIR)ft_pf_get_uint_len.c \
+$(SRCDIR)ft_pf_get_int_len.c \
+$(SRCDIR)ft_pf_read_length.c \
+$(SRCDIR)ft_pf_check_zeropadding.c \
+$(SRCDIR)ft_pf_conv_di.c \
+$(SRCDIR)ft_pf_handle_di.c \
+$(SRCDIR)ft_pf_skip_leading_zeroes.c \
+$(SRCDIR)ft_pf_handle_f.c \
+$(SRCDIR)ft_pf_conv_f.c \
+$(SRCDIR)ft_pf_round_f_str.c \
+$(SRCDIR)ft_pf_get_double_len.c \
+$(SRCDIR)ft_pf_need_to_roundup.c \
+$(SRCDIR)ft_pf_initializers.c \
+$(SRCDIR)ft_pf_mallocfail.c \
+$(SRCDIR)ft_dprintf.c \
+$(SRCDIR)ft_sprintf.c \
+$(SRCDIR)ft_snprintf.c \
+$(SRCDIR)ft_pf_writers.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
 CC=gcc
