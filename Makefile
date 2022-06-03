@@ -98,6 +98,8 @@ $(SRCDIR)ft_pf_mallocfail.c \
 $(SRCDIR)ft_dprintf.c \
 $(SRCDIR)ft_sprintf.c \
 $(SRCDIR)ft_snprintf.c \
+$(SRCDIR)ft_atol.c \
+$(SRCDIR)ft_atoll.c \
 $(SRCDIR)ft_pf_writers.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
@@ -121,5 +123,5 @@ fclean : clean
 re : fclean all
 
 test : re
-	$(CC) $(FLAGS) -L. -I. main.c -lft
+	$(CC) -L. -I. main.c -lft
 
