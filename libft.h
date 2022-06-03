@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/06/03 13:09:12 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/06/03 13:12:55 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,6 +188,7 @@ char		*ft_getnbrs(char **str);
 size_t		ft_filerows(char *file);
 long		ft_atol(const char *str);
 long long	ft_atoll(const char *str);
+void		ft_swap(int *a, int *b);
 int			ft_printf(const char *input_format, ...);
 void		ft_pf_stage_to_write(t_pf_controller *pf_controller);
 void		ft_pf_stage_to_end(t_pf_controller *pf_controller);
