@@ -101,7 +101,8 @@ $(SRCDIR)ft_snprintf.c \
 $(SRCDIR)ft_atol.c \
 $(SRCDIR)ft_atoll.c \
 $(SRCDIR)ft_swap.c \
-$(SRCDIR)ft_pf_writers.c
+$(SRCDIR)ft_swap.c \
+$(SRCDIR)ft_quicksortint.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
 CC=gcc

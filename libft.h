@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/06/03 13:12:55 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/06/11 17:22:14 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -260,7 +260,7 @@ int			ft_output_error(t_pf_controller *pf_controller, t_strdata *strdata);
 int			ft_sprintf(char	*str, const char *input_format, ...);
 int			ft_snprintf(char *str, size_t size, const char *input_format, ...);
 void		ft_pf_mallocfail(t_strdata *strdata);
-
+void		ft_quicksortint(int *arr, int len);
 static const t_myfunc	g_funcs[] = {
 	ft_read_format,
 	ft_pf_read_specifiers,
