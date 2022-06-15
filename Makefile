@@ -98,6 +98,7 @@ $(SRCDIR)ft_pf_mallocfail.c \
 $(SRCDIR)ft_dprintf.c \
 $(SRCDIR)ft_sprintf.c \
 $(SRCDIR)ft_snprintf.c \
+$(SRCDIR)ft_pf_writers.c \
 $(SRCDIR)ft_atol.c \
 $(SRCDIR)ft_atoll.c \
 $(SRCDIR)ft_swap.c \
