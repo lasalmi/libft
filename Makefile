@@ -103,6 +103,7 @@ $(SRCDIR)ft_atol.c \
 $(SRCDIR)ft_atoll.c \
 $(SRCDIR)ft_swap.c \
 $(SRCDIR)ft_quicksortint.c \
+$(SRCDIR)ft_is_in_range.c \
 $(SRCDIR)ft_abs.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
