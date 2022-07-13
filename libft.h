@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/06/21 11:10:15 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/07/13 22:01:56 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -263,6 +263,7 @@ void		ft_pf_mallocfail(t_strdata *strdata);
 void		ft_quicksortint(int *arr, int len);
 int			ft_abs(int value);
 int			ft_is_in_range(int nb, int start, int end);
+int			ft_diff(int a, int b);
 static const t_myfunc	g_funcs[] = {
 	ft_read_format,
 	ft_pf_read_specifiers,
