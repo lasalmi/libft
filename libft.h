@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/07/13 22:01:56 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/07/16 09:59:11 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -264,15 +264,6 @@ void		ft_quicksortint(int *arr, int len);
 int			ft_abs(int value);
 int			ft_is_in_range(int nb, int start, int end);
 int			ft_diff(int a, int b);
-static const t_myfunc	g_funcs[] = {
-	ft_read_format,
-	ft_pf_read_specifiers,
-	ft_pf_handle_char,
-	ft_pf_handle_str,
-	ft_pf_handle_ptr,
-	ft_pf_oux_handler,
-	ft_pf_handle_di,
-	ft_pf_handle_f,
-	ft_write_iterated
-};
+void		ft_pf_dispatcher(t_pf_controller *pf_controller, \
+t_strdata *strdata, int func_index);
 #endif
