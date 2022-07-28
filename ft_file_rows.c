@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 09:45:31 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/05/29 09:58:03 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/07/28 17:57:12 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	ft_error(char *error)
 }
 
 /* Counts the rows of a given file */
-size_t	ft_filerows(char *file)
+size_t	ft_file_rows(char *file)
 {
 	size_t	rows;
 	int		fd;
@@ -29,6 +29,7 @@ size_t	ft_filerows(char *file)
 	rows = 0;
 	fd = open(file, O_RDONLY);
 	ret = get_next_line(fd, &line);
+	ft_strdel(&line);
 	if (ret > 0 && fd > 0)
 		rows++;
 	else
@@ -36,6 +37,7 @@ size_t	ft_filerows(char *file)
 	while (ret > 0)
 	{
 		ret = get_next_line(fd, &line);
+		ft_strdel(&line);
 		if (ret > 0)
 			rows++;
 	}
