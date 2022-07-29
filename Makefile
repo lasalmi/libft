@@ -65,7 +65,6 @@ $(SRCDIR)ft_intlen.c \
 $(SRCDIR)ft_getchar.c \
 $(SRCDIR)ft_getnbrs.c \
 $(SRCDIR)get_next_line.c \
-$(SRCDIR)ft_filerows.c \
 $(SRCDIR)ft_uintlen.c \
 $(SRCDIR)ft_printf.c \
 $(SRCDIR)ft_pf_read_specifiers.c \
@@ -105,7 +104,8 @@ $(SRCDIR)ft_swap.c \
 $(SRCDIR)ft_quicksortint.c \
 $(SRCDIR)ft_is_in_range.c \
 $(SRCDIR)ft_diff.c \
-$(SRCDIR)ft_abs.c
+$(SRCDIR)ft_abs.c \
+$(SRCDIR)ft_file_rows.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
 CC=gcc
