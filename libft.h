@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/07/16 09:59:11 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/07/29 10:26:06 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -266,4 +266,5 @@ int			ft_is_in_range(int nb, int start, int end);
 int			ft_diff(int a, int b);
 void		ft_pf_dispatcher(t_pf_controller *pf_controller, \
 t_strdata *strdata, int func_index);
+size_t		ft_file_rows(char *file);
 #endif
