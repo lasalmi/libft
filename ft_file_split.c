@@ -6,11 +6,11 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 23:09:35 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/07/31 12:31:20 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/07/31 13:32:54 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "libft.h"
 
 static void	load_file(char ***table, char *file, char *delim)
 {
