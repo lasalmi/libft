@@ -106,6 +106,7 @@ $(SRCDIR)ft_is_in_range.c \
 $(SRCDIR)ft_diff.c \
 $(SRCDIR)ft_abs.c \
 $(SRCDIR)ft_file_split.c \
+$(SRCDIR)ft_line_split.c \
 $(SRCDIR)ft_file_rows.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./

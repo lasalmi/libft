@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 23:09:35 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/07/31 12:26:16 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/07/31 12:31:20 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	load_file(char ***table, char *file, char *delim)
 		ret = get_next_line(fd, &line);
 		if (ret < 1)
 			break ;
-		table[i] = split_columns(line, delim);
+		table[i] = ft_line_split(line, delim);
 		ft_strdel(&line);
 		i++;
 	}
