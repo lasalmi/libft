@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 23:09:35 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/07/31 13:32:54 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/08/06 00:44:40 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,12 @@ static void	load_file(char ***table, char *file, char *delim)
 
 char	***ft_file_split(char *file, char *delim)
 {
-	size_t	rows;
+	int		rows;
 	char	***table;
 
 	rows = ft_file_rows(file);
+	if (rows < 0)
+		exit(2);
 	table = (char ***)malloc(sizeof(char **) * rows + 1);
 	if (!table)
 		exit(2);
