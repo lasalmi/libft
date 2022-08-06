@@ -107,7 +107,9 @@ $(SRCDIR)ft_diff.c \
 $(SRCDIR)ft_abs.c \
 $(SRCDIR)ft_file_split.c \
 $(SRCDIR)ft_line_split.c \
-$(SRCDIR)ft_file_rows.c
+$(SRCDIR)ft_file_rows.c \
+$(SRCDIR)ft_is_number.c \
+$(SRCDIR)ft_is_int.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
 CC=gcc

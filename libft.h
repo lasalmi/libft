@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/07/31 12:31:03 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/08/06 08:40:58 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <stdarg.h>
+# include <limits.h>
 # define BUFF_SIZE 8
 # define FD_MAX 4096
 
@@ -266,7 +267,9 @@ int			ft_is_in_range(int nb, int start, int end);
 int			ft_diff(int a, int b);
 void		ft_pf_dispatcher(t_pf_controller *pf_controller, \
 t_strdata *strdata, int func_index);
-size_t		ft_file_rows(char *file);
+int			ft_file_rows(char *file);
 char		***ft_file_split(char *file, char *delim);
 char		**ft_line_split(char *str, char *delim);
+int			ft_is_number(char *str);
+int			ft_is_int(char *str);
 #endif
