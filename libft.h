@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/08/06 08:40:58 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/08/08 22:25:17 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <stdarg.h>
-# include <limits.h>
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
 # define BUFF_SIZE 8
 # define FD_MAX 4096
 
