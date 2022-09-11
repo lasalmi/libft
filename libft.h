@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:56:51 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/08/08 22:25:17 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/09/11 21:26:27 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -273,4 +273,5 @@ char		***ft_file_split(char *file, char *delim);
 char		**ft_line_split(char *str, char *delim);
 int			ft_is_number(char *str);
 int			ft_is_int(char *str);
+void		ft_free_str_arr(char ***arr);
 #endif
