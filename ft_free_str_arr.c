@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 21:23:21 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/09/11 21:28:13 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/09/11 21:33:49 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ void	ft_free_str_arr(char ***arr)
 		(**arr) = NULL;
 		i++;
 	}
+	free (*arr);
 	*arr = NULL;
 }
