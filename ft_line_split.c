@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 12:27:41 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/09/17 10:37:34 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/09/17 11:00:27 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	**ft_line_split(char *str, char *delim)
 	size_t	i;
 
 	i = 0;
-	table = (char **)malloc(sizeof(char *) * count_columns(str, delim) + 1);
+	table = (char **)malloc(sizeof(char *) * (count_columns(str, delim) + 1));
 	if (!table)
 		exit(2);
 	current = ft_strsep(&str, delim);
