@@ -115,6 +115,7 @@ $(SRCDIR)ft_hash_search.c \
 $(SRCDIR)ft_hash_add.c \
 $(SRCDIR)ft_hash_key.c \
 $(SRCDIR)ft_hash_remove.c
+$(SRCDIR)ft_hash_map.c
 
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
