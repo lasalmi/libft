@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:05:12 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/06/03 00:03:48 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/12/05 09:53:21 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ static void	ft_pf_print_padding(t_pf_controller *pf_controller, \
 t_strdata *strdata)
 {
 	int	ret;
-	int	fd;
 
-	fd = pf_controller->fd;
 	ret = 0;
 	if (!strdata->padding || pf_controller->stage == FT_END)
 		return ;
@@ -46,9 +44,7 @@ static void	ft_pf_print_variable(t_pf_controller *pf_controller, \
 t_strdata *strdata)
 {
 	int	ret;
-	int	fd;
 
-	fd = pf_controller->fd;
 	ret = 0;
 	if (!strdata->variable_str || pf_controller->stage == FT_END)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 16:35:14 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/07/16 09:57:58 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/12/05 09:53:37 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 int	ft_snprintf(char *str, size_t size, const char *input_format, ...)
 {
 	t_strdata		strdata;
-	t_status		ret;
 	t_pf_controller	pf_controller;
 
-	ret = OKAY;
 	va_start(strdata.list, input_format);
 	strdata.working_format = input_format;
 	ft_pf_init_pf_controller(&pf_controller);

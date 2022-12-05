@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 08:33:31 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/08/06 08:41:45 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/12/05 09:54:04 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ contains a valid number representation */
 
 int	ft_is_int(char *str)
 {
-	char		*temp;
 	long long	result;
 
-	temp = str;
 	if (ft_strlen(str) > 11 || !ft_is_number(str))
 		return (0);
 	result = ft_atoll(str);

@@ -6,7 +6,7 @@
 /*   By: lasalmi <lasalmi@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:02:48 by lasalmi           #+#    #+#             */
-/*   Updated: 2022/05/20 13:15:50 by lasalmi          ###   ########.fr       */
+/*   Updated: 2022/12/05 09:48:27 by lasalmi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,8 @@ static void	ft_firstcpy(void *dest, const void *src, size_t *n)
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*copysource;
-	char	*copydest;
 	int		i;
 
-	copysource = (char *)src;
-	copydest = (char *)dest;
 	i = 0;
 	if (!dest && !src)
 		return (dest);
