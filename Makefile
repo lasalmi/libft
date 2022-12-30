@@ -120,7 +120,7 @@ $(SRCDIR)ft_hash_map.c
 OBJECTS := $(SRCS:.c=.o)
 SRCDIR=./
 CC=gcc
-FLAGS=-Wall -Wextra -Werror -g
+FLAGS=-Wall -Wextra -Werror
 NAME=libft.a
 
 all : $(NAME)
