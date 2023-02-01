@@ -125,8 +125,9 @@ NAME=libft.a
 
 all : $(NAME)
 
-$(OBJECTS) : $(SRCS)
-	gcc $(FLAGS) -I. -c $(SRCS)
+$(OBJECTS):%.o:$(SRC_DIR)%.c
+	gcc $(FLAGS) -I. -c $< -o $@
+
 $(NAME) : $(OBJECTS)
 	ar -rcs $(NAME) $(OBJECTS)
 
@@ -138,6 +139,4 @@ fclean : clean
 
 re : fclean all
 
-test : re
-	$(CC) -L. -I. main.c -lft
-
+.PHONY : all clean fclean re
